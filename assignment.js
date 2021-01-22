@@ -1,4 +1,4 @@
-
+// GitHub link: https://github.com/d3adb0d7/js-assignment-3/blob/main/assignment.js
 // kilometerToMeter convertion function
 function kilometerToMeter(kilometer) {
     const meter = kilometer * 1000;
