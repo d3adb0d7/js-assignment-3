@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>JSON</h1>
+    <h2>Javascript object notation</h2>
+    <ul id="users-container">
+
+    </ul>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(Response => Response.json())
+        .then(json => displayusers(json))
+        .catch(error => console.log(error))
+        function displayusers(users){
+            // console.log("users", users);
+            const usernames = users.map(user => user.address.zipcode);
+            // console.log(usernames);
+            for (let i = 0; i < usernames.length; i++) {
+                const element = usernames[i];
+                console.log(element);
+                const li = document.createElement('li');                
+            }
+        }
+        
+        
+
+    </script>
+</body>
+</html>
